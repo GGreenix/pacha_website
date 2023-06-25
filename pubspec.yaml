@@ -1,0 +1,28 @@
+name: pacha_website
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  social_media_buttons: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - lib/assests/printer.jpg
+    - lib/assests/tal.jpg
+    - lib/assests/our_printer.jpg
+    - lib/assests/happy_customers.png
+    - lib/assests/instagram_logo.png
+    
