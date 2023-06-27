@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-
-class BottomRow extends StatelessWidget {
-  const BottomRow({super.key});
+class MobileBottomRow extends StatelessWidget {
+  const MobileBottomRow({super.key});
 
   @override
   Widget build(BuildContext context) {
+    const TextStyle style = TextStyle(color: Colors.white,fontSize: 12.5);
     return Container(color: const Color.fromARGB(255, 37, 45, 46),
     child:  Row(
       
       children: [
-        const Spacer(flex: 1,),
+        Spacer(),
         Expanded(
-          flex: 2,
+          flex: 30,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -26,13 +26,13 @@ class BottomRow extends StatelessWidget {
                 
                 
               ],),
-              const Text("pacha3dprints@gmail.com",style: TextStyle(color: Colors.white,fontSize: 20)),
-              const Text("Tal: +972-504460672",style: TextStyle(color: Colors.white,fontSize: 20)),
-              const Text("Guy: +972-509025901",style: TextStyle(color: Colors.white,fontSize: 20))
+              const Text("pacha3dprints@gmail.com",style: style),
+              const Text("Tal: +972-504460672",style: style),
+              const Text("Guy: +972-509025901",style: style)
 
           ],),
         ),
-        const Spacer(flex: 1,),
+        Spacer(),
       ],
     ),
     );

@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:pacha_website/constants.dart';
 
-class WelcomeTile extends StatelessWidget {
-  const WelcomeTile({
+class PCWelcomeTile extends StatelessWidget {
+  const PCWelcomeTile({
     super.key,
     required this.constraints,
   });

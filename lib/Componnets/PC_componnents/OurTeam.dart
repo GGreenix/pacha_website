@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:pacha_website/Componnets/Profile.dart';
 import 'package:pacha_website/constants.dart';
 
-class OurTeam extends StatelessWidget {
+class PCOurTeam extends StatelessWidget {
   final BoxConstraints constraints;
 
-  const OurTeam({
+  const PCOurTeam({
     super.key,
     required this.constraints,
 

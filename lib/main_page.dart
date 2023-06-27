@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pacha_website/Componnets/PCWEBComponent.dart';
+import 'package:pacha_website/Componnets/PC_componnents/PCWEBComponent.dart';
+import 'package:pacha_website/Componnets/mobile_componnents/MobileWEBComponnents.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -28,7 +29,7 @@ class MainPage extends StatelessWidget {
                       return PCWEBComponent(constraints: constraints);
                     }
               else{
-                      return const Placeholder();
+                      return MobileWEBComponnents(constraints: constraints);
               }
             },
           ),

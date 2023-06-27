@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pacha_website/Componnets/BottomRow.dart';
-import 'package:pacha_website/Componnets/OurTeam.dart';
-import 'package:pacha_website/Componnets/WelcomingTile.dart';
+import 'package:pacha_website/Componnets/PC_componnents/BottomRow.dart';
+import 'package:pacha_website/Componnets/PC_componnents/OurTeam.dart';
+import 'package:pacha_website/Componnets/PC_componnents/WelcomingTile.dart';
 
 // ignore: must_be_immutable
 class PCWEBComponent extends StatelessWidget {
@@ -22,15 +22,15 @@ class PCWEBComponent extends StatelessWidget {
                 child: Container(color: Colors.white,)),
               Expanded(
                 flex: 30,
-                child: WelcomeTile(constraints: constraints)
+                child: PCWelcomeTile(constraints: constraints)
                           ),
         Expanded(
           flex: 35,
-          child: OurTeam(constraints: constraints,),
+          child: PCOurTeam(constraints: constraints,),
         ),
         Expanded(
           flex: 2,
-                    child: BottomRow())
+                    child: PCBottomRow(constraints: constraints,))
       ],
     );
   }
