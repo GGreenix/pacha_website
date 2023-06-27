@@ -22,7 +22,7 @@ class MobileOurTeam extends StatelessWidget {
                     Text("Our team",
                     style: TextStyle(
                       color: Constats.title_color,
-                      fontSize: 70
+                      fontSize: 71
                       ),
                     ),
                     Padding(
