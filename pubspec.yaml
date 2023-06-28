@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   social_media_buttons: ^1.0.0
+  google_fonts: ^5.1.0
 
 dev_dependencies:
   flutter_test:
@@ -25,4 +26,5 @@ flutter:
     - lib/assests/our_printer.jpg
     - lib/assests/happy_customers.png
     - lib/assests/instagram_logo.png
-    
+  
+  

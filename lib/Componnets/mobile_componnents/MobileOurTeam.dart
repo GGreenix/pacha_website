@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../constants.dart';
 import '../Profile.dart';
@@ -20,18 +21,20 @@ class MobileOurTeam extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text("Our team",
-                    style: TextStyle(
+                    style: GoogleFonts.openSans(textStyle:TextStyle(
+                      // fontFamily: 'Test',
                       color: Constats.title_color,
                       fontSize: 71
                       ),
+                    )
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 30),
                       child: Text("Pacha 3D Prints was founded by a team of\nexperienced additive manufacturing specialists who shared a passion for providing top-of-the-line FDM printers and personalized customer service.",
-                      style: TextStyle(
+                      style: GoogleFonts.openSans(textStyle:TextStyle(
                         fontSize: 20,
                         color: Constats.description_color),
-                      ),
+                      )),
                     ),
                   ],
                 ),
@@ -74,15 +77,15 @@ class MobileOurTeam extends StatelessWidget {
               Column(
                 children: [
                   Text("HAPPY CUSTOMERS",
-                            style: TextStyle(
+                            style: GoogleFonts.openSans(textStyle:TextStyle(
                               color: Constats.title_color,
-                              fontSize: 70
+                              fontSize: 60
                               ),
-                            ),
-                            Text(Constats.description_ourteam,style: TextStyle(
+                            )),
+                            Text(Constats.description_ourteam,style: GoogleFonts.openSans(textStyle:TextStyle(
                                             color: Constats.description_color,
                                             fontSize: 20
-                                            ),),
+                                            ),)),
                 ],
               ),
                 ClipRRect(

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pacha_website/constants.dart';
 
 class Profile extends StatelessWidget {
@@ -43,22 +44,22 @@ class Profile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          Text(this.name, style: TextStyle(
+          Text(this.name, style: GoogleFonts.openSans(textStyle:TextStyle(
             color: Constats.title_color,
-            fontSize: 20,
-            fontWeight: FontWeight.bold
-          ),
-          ),
-          Text(this.position,style: TextStyle(
-            color: Constats.description_color,
-            fontSize: 20,
-            fontWeight: FontWeight.bold
-          ),),
-          Text(this.description,style: TextStyle(
-            color: Constats.description_color,
-            fontSize: 20,
+            fontSize: 15,
             fontWeight: FontWeight.bold
           ),)
+          ),
+          Text(this.position,style: GoogleFonts.openSans(textStyle:TextStyle(
+            color: Constats.description_color,
+            fontSize: 15,
+            fontWeight: FontWeight.bold
+          ),)),
+          Text(this.description,style: GoogleFonts.openSans(textStyle:TextStyle(
+            color: Constats.description_color,
+            fontSize: 20,
+            fontWeight: FontWeight.bold
+          ),))
         ],)
       ],);
           }
@@ -76,17 +77,17 @@ class Profile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          Text(this.name, style: TextStyle(
+          Text(this.name, style: GoogleFonts.roboto(textStyle:TextStyle(
             color: Constats.title_color,
             fontSize: 40,
             fontWeight: FontWeight.bold
+          ),)
           ),
-          ),
-          Text(this.position,style: TextStyle(
+          Text(this.position,style: GoogleFonts.roboto(textStyle:TextStyle(
             color: Constats.description_color,
             fontSize: 20,
             fontWeight: FontWeight.bold
-          ),),
+          ),)),
           Text(this.description,style: TextStyle(
             color: Constats.description_color,
             fontSize: 20,

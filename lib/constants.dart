@@ -21,6 +21,8 @@ class Constats {
 
   static String pacha_position = "CEO";
 
-  static String pacha_description= "";  
+  static String pacha_description= "";
+
+  static String title_fontFamily = "Hebre";  
   
 }

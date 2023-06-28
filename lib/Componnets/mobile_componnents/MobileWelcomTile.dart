@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pacha_website/constants.dart';
 
 class MobileWelcomeTile extends StatelessWidget {
@@ -17,17 +18,31 @@ class MobileWelcomeTile extends StatelessWidget {
         Directionality(
                   textDirection: TextDirection.rtl,
                   child: Text(Constats.title_mobile,
-                  style:  TextStyle(
+                  style:  GoogleFonts.openSans(
+                    textStyle: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize:25,
-                    color: Constats.title_color),),
+                    color: Constats.title_color),
+                  )
+                    ),
                 ),
-                Directionality(
-                  textDirection: TextDirection.rtl,
-                  child: Text(Constats.description,
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Constats.description_color),),
+                Row(
+                  children: [
+                    Spacer(),
+                    Expanded(
+                      flex: 5,
+                      child: Directionality(
+                        textDirection: TextDirection.rtl,
+                        child: Text(Constats.description,
+                        style: GoogleFonts.openSans(textStyle:TextStyle(
+                          fontFamily: Constats.title_fontFamily,
+                          fontSize: 15,
+                          color: Constats.description_color))
+                          ,),
+                      ),
+                    ),
+                    Spacer(),
+                  ],
                 ),ClipRRect(
         borderRadius: const BorderRadius.all(Radius.circular(10)),
         child: Image(
