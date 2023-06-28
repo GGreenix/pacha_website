@@ -16,7 +16,7 @@ class MobileBottomRow extends StatelessWidget {
           flex: 30,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(children: [
                 const Icon(Icons.tiktok,color: Colors.white,size: 25,),
@@ -28,12 +28,15 @@ class MobileBottomRow extends StatelessWidget {
                 
                 
               ],),
-              Text("pacha3dprints@gmail.com",style: GoogleFonts.openSans(textStyle:TextStyle(color: Colors.white,fontSize: 17))),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: Text("pacha3dprints@gmail.com",style: GoogleFonts.openSans(textStyle:TextStyle(color: Colors.white,fontSize: 14))),
+              ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text("Tal: +972-504460672",style:  GoogleFonts.openSans(textStyle:TextStyle(color: Colors.white,fontSize: 17))),
-                  Text("Guy: +972-509025901",style:  GoogleFonts.openSans(textStyle:TextStyle(color: Colors.white,fontSize: 17))),
+                  Text("Tal: +972-504460672",style:  GoogleFonts.openSans(textStyle:TextStyle(color: Colors.white,fontSize: 14))),
+                  Text("Guy: +972-509025901",style:  GoogleFonts.openSans(textStyle:TextStyle(color: Colors.white,fontSize: 14))),
                 ],
               )
 
