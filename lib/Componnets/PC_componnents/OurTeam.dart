@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pacha_website/Componnets/Constraintor.dart';
 import 'package:pacha_website/Componnets/Profile.dart';
 import 'package:pacha_website/constants.dart';
+import 'package:visibility_detector/visibility_detector.dart';
 
 class PCOurTeam extends StatelessWidget {
   final BoxConstraints constraints;
@@ -14,14 +16,21 @@ class PCOurTeam extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Stack(
+      
+      children: [
+      Container(color: Colors.white,),
+      Center(
+        child: Constraintor(
+              constraints: constraints,
+              child: LayoutBuilder(
+                builder: (BuildContext context, BoxConstraints constraintsSmall) {
+                  return Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
         Padding(
-          padding: const EdgeInsets.only(left: 60,right: 60,bottom: 50),
+          padding: constraints.maxWidth < 1200 ? EdgeInsets.symmetric(horizontal: 60):EdgeInsets.all(0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -40,72 +49,127 @@ class PCOurTeam extends StatelessWidget {
           ),
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: constraints.maxWidth <= 1200 ? MainAxisAlignment.spaceAround:MainAxisAlignment.spaceBetween,
           children: [
-            constraints.maxWidth >= 1378? Spacer(flex: 1,):Container(),
-            Expanded(
-              flex: 10,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Profile(constraints: constraints,
-                  name: Constats.tal_name,
-                  position: Constats.tal_position,
-                  description: Constats.tal_description,
-                  imagePath: "lib/assests/tal.jpg",),
-                  
-                  Profile(constraints: constraints,
-                  name: Constats.pacha_name,
-                  position: Constats.pacha_position,
-                  description: Constats.pacha_description,
-                  imagePath: "lib/assests/tal.jpg",),
-                ],
-              ),
-            ),
-            constraints.maxWidth >= 1378? Spacer(flex: 1,):Container(),
+            Profile(constraints: constraints,
+            name: Constats.tal_name,
+            position: Constats.tal_position,
+            description: Constats.tal_description,
+            imagePath: "lib/assests/tal.jpg",),
+            
+            Profile(constraints: constraints,
+            name: Constats.pacha_name,
+            position: Constats.pacha_position,
+            description: Constats.pacha_description,
+            imagePath: "lib/assests/tal.jpg",),
           ],
         ),
-        SizedBox(
-          height: constraints.maxHeight/5,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+        Row(
+            
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(right: 20),
-                child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      
-                      children: [
-                        Text("HAPPY\nCUSTOMERS",
-                        style: TextStyle(
-                          color: Constats.title_color,
-                          fontSize: 70
-                          ),
-                        ),
-                        Text(Constats.description_ourteam,style: TextStyle(
-                                        color: Constats.description_color,
-                                        fontSize: 20
-                                        ),),
-                                        Spacer()
+              Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     
-                      ],
-                    ),
-              ),
+                    children: [
+                      Text("HAPPY\nCUSTOMERS",
+                      style: TextStyle(
+                        color: Constats.title_color,
+                        fontSize: 70
+                        ),
+                      ),
+                      Text(Constats.description_ourteam,style: TextStyle(
+                                      color: Constats.description_color,
+                                      fontSize: 20
+                                      ),),
+                                      
+                  
+                    ],
+                  ),
                 ClipRRect(
                   
                         borderRadius: BorderRadius.circular(5),
                         child: Image(         
                           image: AssetImage("lib/assests/happy_customers.png"),
-                          width: constraints.maxWidth/3),
+                          width: constraintsSmall.maxWidth/3),
                           
                       ),
             ],
           ),
-        ),
-        
-      ],
+        AnimatedPictures(constraints: constraintsSmall,)
+              ],
+              );
+                },
+              ),
+            ),
       ),
+    ],);
+  }
+}
+
+class AnimatedPictures extends StatefulWidget {
+  BoxConstraints constraints;
+  AnimatedPictures({  
+    super.key,
+    required this.constraints
+  });
+
+  @override
+  State<AnimatedPictures> createState() => _AnimatedPicturesState();
+}
+
+class _AnimatedPicturesState extends State<AnimatedPictures> {
+    bool _visible = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return VisibilityDetector(
+      onVisibilityChanged: (VisibilityInfo info) { _visible?print("no"): setState(() {
+    print("true");
+    _visible = true;
+    print(_visible);
+      }
+      );
+      },
+      key: Key("row"),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+        ClipRRect(
+                
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image(         
+                        image: AssetImage("lib/assests/happy_customers.png"),
+                        width: widget.constraints.maxWidth/5),
+                        
+                    ),
+        ClipRRect(
+                
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image(         
+                        image: AssetImage("lib/assests/happy_customers.png"),
+                        width: widget.constraints.maxWidth/5),
+                        
+                    ),
+        ClipRRect(
+                
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image(         
+                        image: AssetImage("lib/assests/happy_customers.png"),
+                        width: widget.constraints.maxWidth/5),
+                        
+                    ),
+        ClipRRect(
+                
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image(         
+                        image: AssetImage("lib/assests/happy_customers.png"),
+                        width: widget.constraints.maxWidth/5),
+                        
+                    ),
+        
+      ],),
     );
   }
 }

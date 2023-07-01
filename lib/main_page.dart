@@ -23,6 +23,7 @@ class MainPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: SizedBox(
           height: 2000,
+          
           child: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
               if(constraints.maxWidth >= 739){

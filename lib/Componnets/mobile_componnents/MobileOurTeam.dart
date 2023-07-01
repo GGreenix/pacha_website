@@ -74,26 +74,29 @@ class MobileOurTeam extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Column(
-                children: [
-                  Text("HAPPY CUSTOMERS",
-                            style: GoogleFonts.openSans(textStyle:TextStyle(
-                              color: Constats.title_color,
-                              fontSize: 60
-                              ),
-                            )),
-                            Text(Constats.description_ourteam,style: GoogleFonts.openSans(textStyle:TextStyle(
-                                            color: Constats.description_color,
-                                            fontSize: 20
-                                            ),)),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  children: [
+                    Text("HAPPY CUSTOMERS",
+                              style: GoogleFonts.openSans(textStyle:TextStyle(
+                                color: Constats.title_color,
+                                fontSize: 60
+                                ),
+                              )),
+                              Text(Constats.description_ourteam,style: GoogleFonts.openSans(textStyle:TextStyle(
+                                              color: Constats.description_color,
+                                              fontSize: 20
+                                              ),)),
+                  ],
+                ),
               ),
                 ClipRRect(
                   
                         borderRadius: BorderRadius.circular(5),
                         child: Image(         
                           image: AssetImage("lib/assests/happy_customers.png"),
-                          height: constraints.maxHeight/6,)
+                          height: constraints.maxWidth/1.6,)
                           
                       ),
             ],

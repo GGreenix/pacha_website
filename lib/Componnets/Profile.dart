@@ -79,7 +79,7 @@ class Profile extends StatelessWidget {
           children: [
           Text(this.name, style: GoogleFonts.roboto(textStyle:TextStyle(
             color: Constats.title_color,
-            fontSize: 40,
+            fontSize: 35,
             fontWeight: FontWeight.bold
           ),)
           ),
