@@ -1,12 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:pacha_website/Componnets/PC_componnents/PCWEBComponent.dart';
 import 'package:pacha_website/Componnets/mobile_componnents/MobileWEBComponnents.dart';
+import 'package:web_smooth_scroll/web_smooth_scroll.dart';
+class MainPage extends StatefulWidget {
 
-class MainPage extends StatelessWidget {
-  const MainPage({super.key});
+  MainPage({super.key});
+
+  @override
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
+  late ScrollController _scrollController;
+
+  @override
+  void initState() {
+    _scrollController = ScrollController();
+    super.initState();
+  }
+
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 37, 45, 46),
@@ -20,23 +36,27 @@ class MainPage extends StatelessWidget {
           )
         ),
       ),
-      body: SingleChildScrollView(
+      body: WebSmoothScroll(
+        controller: _scrollController,
+         child:SingleChildScrollView(
+          physics: const NeverScrollableScrollPhysics(),
+        controller: _scrollController,
         child: SizedBox(
-          height: 2000,
+          height: 2500,
           
           child: LayoutBuilder(
-            builder: (BuildContext context, BoxConstraints constraints) {
-              if(constraints.maxWidth >= 739){
-                      return PCWEBComponent(constraints: constraints);
-                    }
-              else{
-                      return MobileWEBComponnents(constraints: constraints);
-              }
-            },
-          ),
+        builder: (BuildContext context, BoxConstraints constraints) {
+          if(constraints.maxWidth >= 739){
+            return PCWEBComponent(constraints: constraints,);
+          }
+          else{
+            return MobileWEBComponnents(constraints: constraints);
+          }
+        },
+          )
         )
         
-      ),
+      ),)
       );
   }
 }

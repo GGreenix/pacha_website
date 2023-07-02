@@ -6,7 +6,6 @@ import 'package:pacha_website/Componnets/PC_componnents/WelcomingTile.dart';
 // ignore: must_be_immutable
 class PCWEBComponent extends StatelessWidget {
   BoxConstraints constraints;
-
   
    PCWEBComponent({
     super.key,   required this.constraints,
@@ -18,10 +17,10 @@ class PCWEBComponent extends StatelessWidget {
     return Column(
             children: [
               Expanded(
-                flex: 2,
+                flex: 1,
                 child: Container(color: Colors.white,)),
               Expanded(
-                flex: 30,
+                flex: 15,
                 child: PCWelcomeTile(constraints: constraints)
                           ),
         Expanded(

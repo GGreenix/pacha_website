@@ -21,7 +21,7 @@ class PCBottomRow extends StatelessWidget {
       child: Constraintor(
         constraints: constraints,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: constraints.maxWidth > 1200? MainAxisAlignment.spaceBetween:MainAxisAlignment.spaceAround,
           children: [
             Row(children: [
               const Icon(Icons.tiktok,color: Colors.white,size: 25,),

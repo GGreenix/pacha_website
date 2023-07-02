@@ -7,7 +7,7 @@ class Profile extends StatelessWidget {
   
 
   
-  
+  final transFactor = 982;
   
 
   const Profile({
@@ -26,11 +26,11 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: constraints.maxWidth<900? constraints.maxHeight/7:constraints.maxHeight/8,
+      height: constraints.maxWidth<transFactor? constraints.maxHeight/7:constraints.maxHeight/8,
       
       child: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraintsPF) {
-          if(constraints.maxWidth<900){
+          if(constraints.maxWidth<transFactor){
            return  Column(children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(5),
