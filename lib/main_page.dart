@@ -36,27 +36,25 @@ class _MainPageState extends State<MainPage> {
           )
         ),
       ),
-      body: WebSmoothScroll(
-        controller: _scrollController,
-         child:SingleChildScrollView(
-          physics: const NeverScrollableScrollPhysics(),
+      body: SingleChildScrollView(
+      //  physics: const ,
         controller: _scrollController,
         child: SizedBox(
-          height: 2500,
-          
-          child: LayoutBuilder(
+       height: 2500,
+       
+       child: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
-          if(constraints.maxWidth >= 739){
-            return PCWEBComponent(constraints: constraints,);
-          }
-          else{
-            return MobileWEBComponnents(constraints: constraints);
-          }
+       if(constraints.maxWidth >= 739){
+         return PCWEBComponent(constraints: constraints,);
+       }
+       else{
+         return MobileWEBComponnents(constraints: constraints);
+       }
         },
-          )
+       )
         )
         
-      ),)
+      )
       );
   }
 }
