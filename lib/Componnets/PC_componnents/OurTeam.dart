@@ -25,33 +25,37 @@ class PCOurTeam extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-      Padding(
-        padding: constraints.maxWidth < 1200 ? EdgeInsets.symmetric(horizontal: 60):EdgeInsets.all(0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Directionality(
+      Align(
+        alignment: Alignment.centerRight,
+        child: Padding(
+          padding: constraints.maxWidth < 1200 ? EdgeInsets.symmetric(horizontal: 60):EdgeInsets.all(0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
               
-              textDirection: TextDirection.rtl,
-              child: Text("קצת עלינו",
-              style: TextStyle(
-                color: Constats.title_color,
-                fontSize: 70
+              Directionality(
+                
+                textDirection: TextDirection.rtl,
+                child: Text("קצת עלינו",
+                style: TextStyle(
+                  color: Constats.title_color,
+                  fontSize: 70
+                  ),
                 ),
               ),
-            ),
-            // Text("Pacha 3D Prints was founded by a team of\nexperienced additive manufacturing
-            // specialists who shared a passion for providing top-of-the-line FDM printers and personalized customer service.",
-            Directionality(
-
-              textDirection: TextDirection.rtl,
-              child: Text("אנחנו הוקמנו על ידי קבוצה של מהנדסים בעלי ניסיון רב שנים בתכנון וייצור.\n מומחים בעלי שאיפה לייצוא של מוצר איכותי בטכנולוגיית FDM מהמתקדמות בשוק",
-              style: TextStyle(
-                fontSize: 20,
-                color: Constats.description_color),
+              // Text("Pacha 3D Prints was founded by a team of\nexperienced additive manufacturing
+              // specialists who shared a passion for providing top-of-the-line FDM printers and personalized customer service.",
+              Directionality(
+      
+                textDirection: TextDirection.rtl,
+                child: Text("אנחנו הוקמנו על ידי קבוצה של מהנדסים בעלי ניסיון רב שנים בתכנון וייצור.\n מומחים בעלי שאיפה לייצוא של מוצר איכותי בטכנולוגיית FDM מהמתקדמות בשוק",
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Constats.description_color),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       Row(
@@ -71,35 +75,84 @@ class PCOurTeam extends StatelessWidget {
         ],
       ),
       Row(
-          
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+            
+              Expanded(
+                flex: 6,
+                child: ClipRRect(
                   
-                  children: [
-                    Text("HAPPY\nCUSTOMERS",
-                    style: TextStyle(
-                      color: Constats.title_color,
-                      fontSize: 70
+                        borderRadius: BorderRadius.circular(5),
+                        child: Image(         
+                          image: AssetImage("lib/assests/happy_customers.jpg"),
+                          
+                          ),
+                          
                       ),
-                    ),
-                    Text(Constats.description_ourteam,style: TextStyle(
-                                    color: Constats.description_color,
-                                    fontSize: 20
-                                    ),),
-                                    
-                
-                  ],
-                ),
-              ClipRRect(
-                
-                      borderRadius: BorderRadius.circular(5),
-                      child: Image(         
-                        image: AssetImage("lib/assests/happy_customers.png"),
-                        width: constraintsSmall.maxWidth/3),
-                        
+              ),
+              Spacer(flex: 2,),
+                    Expanded(
+                      flex: 10,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                            const Directionality(
+                                    textDirection: TextDirection.ltr,
+                                    child: Text("?למה אנחנו",
+                                    style: TextStyle(
+                                      color: Color.fromARGB(255, 65, 110, 67),
+                                      fontSize: 30
+                                      ),
+                                    ),
+                                  ),
+                            SizedBox(
+                                width: constraints.maxWidth <= 1200 ?constraints.maxWidth:300,
+                                child: Directionality(
+                                  textDirection: TextDirection.rtl,
+                                  child: Text(Constats.description_ourteam_2 ,style: TextStyle(
+                                                  color: Constats.description_color,
+                                                  fontSize: 20
+                                                  ),),
+                                ),
+                              ),
+                          ],),
+                          Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                
+                                children: [
+                                  const Directionality(
+                                    textDirection: TextDirection.ltr,
+                                    child: Text("הדפסת תלת מימד",
+                                    style: TextStyle(
+                                      color: Color.fromARGB(255, 65, 110, 67),
+                                      fontSize: 30
+                                      ),
+                                    ),
+                                  ),
+                                   SizedBox(
+                                     width: constraints.maxWidth <= 1200 ?constraints.maxWidth:300,
+                                     child: Directionality(
+                                       textDirection: TextDirection.rtl,
+                                       child: Text(Constats.description_ourteam_1 ,style: TextStyle(
+                                                       color: Constats.description_color,
+                                                       fontSize: 20
+                                                       ),),
+                                     ),
+                                   ),
+                                  
+                                                  
+                              
+                                ],
+                              ),
+                        ],
+                      ),
                     ),
           ],
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:social_media_buttons/social_media_buttons.dart';
 
 class MobileBottomRow extends StatelessWidget {
   const MobileBottomRow({super.key});
@@ -18,16 +19,29 @@ class MobileBottomRow extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Row(children: [
-                const Icon(Icons.tiktok,color: Colors.white,size: 25,),
-                GestureDetector(
-                  onTap: () => {},
-                  child: const Image(
-                    height: 25,
-                    image: AssetImage("lib/assests/instagram_logo.png")))
-                
-                
-              ],),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(children: [
+                    IconButton(onPressed: (){},
+                  icon: Icon(Icons.tiktok,color: Colors.white,)),
+                  IconButton(onPressed: (){},
+                  icon: Icon(SocialMediaIcons.facebook,color: Colors.white,))
+                    
+                    
+                    
+                  ],),
+                  Row(children: [
+                    IconButton(onPressed: (){},
+                  icon: Icon(SocialMediaIcons.instagram,color: Colors.white,)),
+                  IconButton(onPressed: (){},
+                  icon: Icon(SocialMediaIcons.whatsapp,color: Colors.white,))
+                    
+                    
+                    
+                  ],),
+                ],
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: Text("pacha3dprints@gmail.com",style: GoogleFonts.openSans(textStyle:TextStyle(color: Colors.white,fontSize: 14))),

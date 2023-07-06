@@ -32,7 +32,6 @@ class Profile extends StatelessWidget {
         builder: (BuildContext context, BoxConstraints constraintsPF) {
           if(constraints.maxWidth<transFactor){
            return  Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(5),
@@ -43,8 +42,8 @@ class Profile extends StatelessWidget {
             
         ),
         Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
           Text(this.name, style: GoogleFonts.openSans(textStyle:TextStyle(
             color: Constats.title_color,
@@ -68,40 +67,46 @@ class Profile extends StatelessWidget {
           return  Row(
         children: [
         
-        Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-          Directionality(
-            textDirection: TextDirection.rtl,
-            child: Text(this.name, style: GoogleFonts.roboto(textStyle:TextStyle(
-              color: Constats.title_color,
-              fontSize: 35,
-              fontWeight: FontWeight.bold
-            ),)
+        Padding(
+          padding: const EdgeInsets.only(right: 10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+            Directionality(
+              textDirection: TextDirection.rtl,
+              child: Text(this.name, style: GoogleFonts.roboto(textStyle:TextStyle(
+                color: Constats.title_color,
+                fontSize: 35,
+                fontWeight: FontWeight.bold
+              ),)
+              ),
             ),
-          ),
-          Directionality(
-            textDirection: TextDirection.rtl,
-            child: Text(this.position,style: GoogleFonts.roboto(textStyle:TextStyle(
+            Directionality(
+              textDirection: TextDirection.rtl,
+              child: Text(this.position,style: GoogleFonts.roboto(textStyle:TextStyle(
+                color: Constats.description_color,
+                fontSize: 20,
+                fontWeight: FontWeight.bold
+              ),)),
+            ),
+            Text(this.description,style: TextStyle(
               color: Constats.description_color,
               fontSize: 20,
               fontWeight: FontWeight.bold
-            ),)),
+            ),)
+          ],),
+        ),
+        AspectRatio(
+          aspectRatio: 18.98/28.29,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(5),
+            child: Image(         
+              height: constraintsPF.maxWidth,               
+              image: AssetImage(this.imagePath),
+              width: constraintsPF.maxHeight),
+              
           ),
-          Text(this.description,style: TextStyle(
-            color: Constats.description_color,
-            fontSize: 20,
-            fontWeight: FontWeight.bold
-          ),)
-        ],),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(5),
-          child: Image(         
-            height: constraintsPF.maxWidth,               
-            image: AssetImage(this.imagePath),
-            width: constraintsPF.maxHeight),
-            
         ),
       ]
       ,);

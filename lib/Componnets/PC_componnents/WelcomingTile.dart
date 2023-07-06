@@ -3,6 +3,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:pacha_website/Componnets/Animations/FadeInTextAnimation.dart';
 import 'package:pacha_website/constants.dart';
+import 'package:social_media_buttons/social_media_buttons.dart';
 
 import '../Constraintor.dart';
 
@@ -42,12 +43,14 @@ class PCWelcomeTile extends StatelessWidget {
                         width: constraints.maxWidth < 1200? constraints.maxWidth/3:512,
                         image: const AssetImage("lib/assests/printer.jpg"),)),
                         
-                        TextButton(
+                        ElevatedButton.icon(
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateColor.resolveWith((states) => Colors.orange),
+                            backgroundColor: MaterialStateColor.resolveWith((states) => Color.fromARGB(255, 0, 255, 8)),
                             splashFactory: NoSplash.splashFactory),
                           onPressed: (){},
-                          child: Text("לחץ כאן להצעת מחיר", style: TextStyle(color: Colors.white),))
+                          icon: Icon(SocialMediaIcons.whatsapp,size: 40,),
+                          label: Text("לחץ כאן להצעת מחיר", style: TextStyle(color: Colors.white, fontSize: 40),))
+                          
                       ],
                     ),
                     Spacer(),

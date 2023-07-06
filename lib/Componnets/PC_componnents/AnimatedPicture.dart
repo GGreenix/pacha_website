@@ -81,7 +81,7 @@ class _AnimatedPicturesState extends State<AnimatedPictures> with TickerProvider
               
                     borderRadius: BorderRadius.circular(5),
                     child: Image(         
-                      image: AssetImage("lib/assests/happy_customers.png"),
+                      image: AssetImage("lib/assests/happy_customers.jpg"),
                       width: widget.constraints.maxWidth/5
                       ),
                       
@@ -92,7 +92,7 @@ class _AnimatedPicturesState extends State<AnimatedPictures> with TickerProvider
               
                     borderRadius: BorderRadius.circular(5),
                     child: Image(         
-                      image: AssetImage("lib/assests/happy_customers.png"),
+                      image: AssetImage("lib/assests/happy_customers.jpg"),
                       width: widget.constraints.maxWidth/5
                       ),
                       
@@ -103,7 +103,7 @@ class _AnimatedPicturesState extends State<AnimatedPictures> with TickerProvider
               
                     borderRadius: BorderRadius.circular(5),
                     child: Image(         
-                      image: AssetImage("lib/assests/happy_customers.png"),
+                      image: AssetImage("lib/assests/happy_customers.jpg"),
                       width: widget.constraints.maxWidth/5
                       ),
                       
@@ -114,7 +114,7 @@ class _AnimatedPicturesState extends State<AnimatedPictures> with TickerProvider
               
                     borderRadius: BorderRadius.circular(5),
                     child: Image(         
-                      image: AssetImage("lib/assests/happy_customers.png"),
+                      image: AssetImage("lib/assests/happy_customers.jpg"),
                       width: widget.constraints.maxWidth/5
                       ),
                       

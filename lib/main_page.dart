@@ -25,14 +25,43 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 37, 45, 46),
-        title: const Center(child: Text(
-          "PACHA 3D PRINTS",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 30,
-            fontWeight: FontWeight.bold
-            ),
-          )
+        
+        title: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(double.infinity),
+                child: Container(
+                  height: 45,
+                  decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 126, 255, 130),
+              
+                  
+                  border: Border.all(color: Colors.black, width: 0.0),
+                  borderRadius:
+                  const BorderRadius.all(Radius.circular(100))),
+                  child: const Center(child: Row(
+                    
+                    children: [
+                      Text(" "),
+                      Icon(Icons.phone),
+                      Text(" +972-509025901 "),
+                    ],
+                  )),
+                  ),
+              ),
+              const Text(
+                "CACTUS PRINTS",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 211, 247, 212),
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold
+                  ),
+                ),
+                
+            ],
+          ),
         ),
       ),
       body: SingleChildScrollView(

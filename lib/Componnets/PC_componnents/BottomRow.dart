@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pacha_website/Componnets/Constraintor.dart';
+import 'package:social_media_buttons/social_media_buttons.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 
@@ -7,10 +8,10 @@ class PCBottomRow extends StatelessWidget {
   BoxConstraints constraints;
 
   PCBottomRow({super.key, required this.constraints});
-
+  static const _fonst_size = 17.0;
   @override
   Widget build(BuildContext context) {
-    // int flex = (-0.0237*constraints.maxWidth + 47.5).toInt();
+    
     
     return Stack(children: [
       Container(
@@ -24,18 +25,19 @@ class PCBottomRow extends StatelessWidget {
           mainAxisAlignment: constraints.maxWidth > 1200? MainAxisAlignment.spaceBetween:MainAxisAlignment.spaceAround,
           children: [
             Row(children: [
-              const Icon(Icons.tiktok,color: Colors.white,size: 25,),
-              GestureDetector(
-                onTap: () => {},
-                child: const Image(
-                  height: 25,
-                  image: AssetImage("lib/assests/instagram_logo.png")))
-              
+              IconButton(onPressed: (){},
+              icon: Icon(Icons.tiktok,color: Colors.white,)),
+              IconButton(onPressed: (){},
+              icon: Icon(SocialMediaIcons.facebook,color: Colors.white,)),
+              IconButton(onPressed: (){},
+              icon: Icon(SocialMediaIcons.instagram,color: Colors.white,)),
+              IconButton(onPressed: (){},
+              icon: Icon(SocialMediaIcons.whatsapp,color: Colors.white,))
               
             ],),
-            const Text("pacha3dprints@gmail.com",style: TextStyle(color: Colors.white,fontSize: 20)),
-            const Text("Tal: +972-504460672",style: TextStyle(color: Colors.white,fontSize: 20)),
-            const Text("Guy: +972-509025901",style: TextStyle(color: Colors.white,fontSize: 20))
+            const Text("pacha3dprints@gmail.com",style: TextStyle(color: Colors.white,fontSize: _fonst_size)),
+            const Text("Tal: +972-504460672",style: TextStyle(color: Colors.white,fontSize: _fonst_size)),
+            const Text("Guy: +972-509025901",style: TextStyle(color: Colors.white,fontSize: _fonst_size))
         
         ],),
       ),

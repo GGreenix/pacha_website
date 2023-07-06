@@ -30,8 +30,8 @@ flutter:
     - lib/assests/printer.jpg
     - lib/assests/tal.jpg
     - lib/assests/pacha.jpg
-    - lib/assests/our_printer.jpg
-    - lib/assests/happy_customers.png
-    - lib/assests/instagram_logo.png
+    
+    - lib/assests/happy_customers.jpg
+    
   
   

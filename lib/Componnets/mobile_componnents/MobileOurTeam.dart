@@ -60,7 +60,7 @@ class MobileOurTeam extends StatelessWidget {
                     name: Constats.pacha_name,
                     position: Constats.pacha_position,
                     description: Constats.pacha_description,
-                    imagePath: "lib/assests/tal.jpg",),
+                    imagePath: "lib/assests/pacha.jpg",),
                   ],
                 ),
                           ),
@@ -84,7 +84,7 @@ class MobileOurTeam extends StatelessWidget {
                                 fontSize: 60
                                 ),
                               )),
-                              Text(Constats.description_ourteam,style: GoogleFonts.openSans(textStyle:TextStyle(
+                              Text(Constats.description_ourteam_1,style: GoogleFonts.openSans(textStyle:TextStyle(
                                               color: Constats.description_color,
                                               fontSize: 20
                                               ),)),
