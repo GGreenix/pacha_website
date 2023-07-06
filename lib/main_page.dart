@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pacha_website/Componnets/PC_componnents/PCWEBComponent.dart';
 import 'package:pacha_website/Componnets/mobile_componnents/MobileWEBComponnents.dart';
-import 'package:web_smooth_scroll/web_smooth_scroll.dart';
 class MainPage extends StatefulWidget {
 
   MainPage({super.key});

@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pacha_website/constants.dart';
@@ -33,12 +34,18 @@ class MobileWelcomeTile extends StatelessWidget {
                       flex: 5,
                       child: Directionality(
                         textDirection: TextDirection.rtl,
-                        child: Text(Constats.description,
-                        style: GoogleFonts.openSans(textStyle:TextStyle(
-                          fontFamily: Constats.title_fontFamily,
+                        child: DefaultTextStyle(
+    style: GoogleFonts.openSans(textStyle:TextStyle(
                           fontSize: 15,
-                          color: Constats.description_color))
-                          ,),
+                          color: Constats.description_color)),
+    child: AnimatedTextKit(
+      totalRepeatCount: 1,
+      animatedTexts: [
+        TyperAnimatedText(Constats.description_mobile),
+      ],
+      
+    ),
+  ),
                       ),
                     ),
                     Spacer(),

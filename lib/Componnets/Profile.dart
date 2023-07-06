@@ -31,7 +31,9 @@ class Profile extends StatelessWidget {
       child: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraintsPF) {
           if(constraints.maxWidth<transFactor){
-           return  Column(children: [
+           return  Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(5),
           child: Image(         
@@ -65,6 +67,34 @@ class Profile extends StatelessWidget {
           }
           return  Row(
         children: [
+        
+        Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+          Directionality(
+            textDirection: TextDirection.rtl,
+            child: Text(this.name, style: GoogleFonts.roboto(textStyle:TextStyle(
+              color: Constats.title_color,
+              fontSize: 35,
+              fontWeight: FontWeight.bold
+            ),)
+            ),
+          ),
+          Directionality(
+            textDirection: TextDirection.rtl,
+            child: Text(this.position,style: GoogleFonts.roboto(textStyle:TextStyle(
+              color: Constats.description_color,
+              fontSize: 20,
+              fontWeight: FontWeight.bold
+            ),)),
+          ),
+          Text(this.description,style: TextStyle(
+            color: Constats.description_color,
+            fontSize: 20,
+            fontWeight: FontWeight.bold
+          ),)
+        ],),
         ClipRRect(
           borderRadius: BorderRadius.circular(5),
           child: Image(         
@@ -73,27 +103,6 @@ class Profile extends StatelessWidget {
             width: constraintsPF.maxHeight),
             
         ),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-          Text(this.name, style: GoogleFonts.roboto(textStyle:TextStyle(
-            color: Constats.title_color,
-            fontSize: 35,
-            fontWeight: FontWeight.bold
-          ),)
-          ),
-          Text(this.position,style: GoogleFonts.roboto(textStyle:TextStyle(
-            color: Constats.description_color,
-            fontSize: 20,
-            fontWeight: FontWeight.bold
-          ),)),
-          Text(this.description,style: TextStyle(
-            color: Constats.description_color,
-            fontSize: 20,
-            fontWeight: FontWeight.bold
-          ),)
-        ],)
       ]
       ,);
         },
