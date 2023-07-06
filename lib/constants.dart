@@ -14,13 +14,13 @@ class Constats {
 
   static String tal_position = "Sales&marketing";
 
-  static String tal_description = "אח יקר חתיך סקסי בטירוף";
+  static String tal_description = "";
 
   static String pacha_name = "גיא פצ'ה";
 
   static String pacha_position = "Founder";
 
-  static String pacha_description= "הומו קוקסינל (אחלה חזה)";
+  static String pacha_description= "";
 
    
 
