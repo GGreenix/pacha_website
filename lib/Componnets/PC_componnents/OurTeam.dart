@@ -25,58 +25,8 @@ class PCOurTeam extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-      Align(
-        alignment: Alignment.centerRight,
-        child: Padding(
-          padding: constraints.maxWidth < 1200 ? EdgeInsets.symmetric(horizontal: 60):EdgeInsets.all(0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              
-              Directionality(
-                
-                textDirection: TextDirection.rtl,
-                child: Text("קצת עלינו",
-                style: TextStyle(
-                  color: Constats.title_color,
-                  fontSize: 70
-                  ),
-                ),
-              ),
-              // Text("Pacha 3D Prints was founded by a team of\nexperienced additive manufacturing
-              // specialists who shared a passion for providing top-of-the-line FDM printers and personalized customer service.",
-              Directionality(
-      
-                textDirection: TextDirection.rtl,
-                child: Text("אנחנו הוקמנו על ידי קבוצה של מהנדסים בעלי ניסיון רב שנים בתכנון וייצור.\n מומחים בעלי שאיפה לייצוא של מוצר איכותי בטכנולוגיית FDM מהמתקדמות בשוק",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Constats.description_color),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-      Row(
-        mainAxisAlignment: constraints.maxWidth <= 1200 ? MainAxisAlignment.spaceAround:MainAxisAlignment.spaceBetween,
-        children: [
-          Profile(constraints: constraints,
-          name: Constats.tal_name,
-          position: Constats.tal_position,
-          description: Constats.tal_description,
-          imagePath: "lib/assests/tal.jpg",),
-          
-          Profile(constraints: constraints,
-          name: Constats.pacha_name,
-          position: Constats.pacha_position,
-          description: Constats.pacha_description,
-          imagePath: "lib/assests/pacha.jpg",),
-        ],
-      ),
-      Row(
+        Row(
           crossAxisAlignment: CrossAxisAlignment.start,
-          // mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             
               Expanded(
@@ -112,7 +62,7 @@ class PCOurTeam extends StatelessWidget {
                                     ),
                                   ),
                             SizedBox(
-                                width: constraints.maxWidth <= 1200 ?constraints.maxWidth:300,
+                                width: constraints.maxWidth <= 1200 ?constraints.maxWidth/4:300,
                                 child: Directionality(
                                   textDirection: TextDirection.rtl,
                                   child: Text(Constats.description_ourteam_2 ,style: TextStyle(
@@ -137,7 +87,7 @@ class PCOurTeam extends StatelessWidget {
                                     ),
                                   ),
                                    SizedBox(
-                                     width: constraints.maxWidth <= 1200 ?constraints.maxWidth:300,
+                                     width: constraints.maxWidth <= 1200 ?constraints.maxWidth/4:300,
                                      child: Directionality(
                                        textDirection: TextDirection.rtl,
                                        child: Text(Constats.description_ourteam_1 ,style: TextStyle(
@@ -156,6 +106,42 @@ class PCOurTeam extends StatelessWidget {
                     ),
           ],
         ),
+      Directionality(
+        
+        textDirection: TextDirection.rtl,
+        child: Text("הצוות",
+        style: TextStyle(
+          color: Constats.title_color,
+          fontSize: 70
+          ),
+        ),
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Profile(constraints: constraints,
+          name: Constats.tal_name,
+          position: Constats.tal_position,
+          description: Constats.tal_description,
+          imagePath: "lib/assests/tal.jpg",),
+          
+          Profile(constraints: constraints,
+          name: Constats.pacha_name,
+          position: Constats.pacha_position,
+          description: Constats.pacha_description,
+          imagePath: "lib/assests/pacha.jpg",),
+        ],
+      ),
+      // Directionality(
+      
+      //           textDirection: TextDirection.rtl,
+      //           child: Text("אנחנו הוקמנו על ידי קבוצה של מהנדסים בעלי ניסיון רב שנים בתכנון וייצור.\n מומחים בעלי שאיפה לייצוא של מוצר איכותי בטכנולוגיית FDM מהמתקדמות בשוק",
+      //           style: TextStyle(
+      //             fontSize: 20,
+      //             color: Constats.description_color),
+      //           ),
+      //         ),
+      
       AnimatedPictures(constraints: constraintsSmall,),
       AnimatedLogos(constraints: constraintsSmall,)
             ],

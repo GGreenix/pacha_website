@@ -30,7 +30,16 @@ class _MainPageState extends State<MainPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              ClipRRect(
+              
+              const Text(
+                "CACTUS PRINTS",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 211, 247, 212),
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold
+                  ),
+                ),
+                ClipRRect(
                 borderRadius: BorderRadius.circular(double.infinity),
                 child: Container(
                   height: 45,
@@ -51,14 +60,6 @@ class _MainPageState extends State<MainPage> {
                   )),
                   ),
               ),
-              const Text(
-                "CACTUS PRINTS",
-                style: TextStyle(
-                  color: Color.fromARGB(255, 211, 247, 212),
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold
-                  ),
-                ),
                 
             ],
           ),
