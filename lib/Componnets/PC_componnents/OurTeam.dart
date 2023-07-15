@@ -6,9 +6,9 @@ import 'package:pacha_website/constants.dart';
 import 'Animated logos.dart';
 import 'AnimatedPicture.dart';
 
-class PCOurTeam extends StatelessWidget {
+class PCWhyus extends StatelessWidget {
   final BoxConstraints constraints;
-  PCOurTeam({
+  PCWhyus({
     super.key,
     required this.constraints,  
 
@@ -106,44 +106,7 @@ class PCOurTeam extends StatelessWidget {
                     ),
           ],
         ),
-      Directionality(
-        
-        textDirection: TextDirection.rtl,
-        child: Text("הצוות",
-        style: TextStyle(
-          color: Constats.title_color,
-          fontSize: 70
-          ),
-        ),
-      ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Profile(constraints: constraints,
-          name: Constats.tal_name,
-          position: Constats.tal_position,
-          description: Constats.tal_description,
-          imagePath: "lib/assests/tal.jpg",),
-          
-          Profile(constraints: constraints,
-          name: Constats.pacha_name,
-          position: Constats.pacha_position,
-          description: Constats.pacha_description,
-          imagePath: "lib/assests/pacha.jpg",),
-        ],
-      ),
-      // Directionality(
       
-      //           textDirection: TextDirection.rtl,
-      //           child: Text("אנחנו הוקמנו על ידי קבוצה של מהנדסים בעלי ניסיון רב שנים בתכנון וייצור.\n מומחים בעלי שאיפה לייצוא של מוצר איכותי בטכנולוגיית FDM מהמתקדמות בשוק",
-      //           style: TextStyle(
-      //             fontSize: 20,
-      //             color: Constats.description_color),
-      //           ),
-      //         ),
-      
-      AnimatedPictures(constraints: constraintsSmall,),
-      AnimatedLogos(constraints: constraintsSmall,)
             ],
             );
               },

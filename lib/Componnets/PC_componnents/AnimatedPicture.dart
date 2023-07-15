@@ -73,7 +73,7 @@ class _AnimatedPicturesState extends State<AnimatedPictures> with TickerProvider
       },
       key: Key("row"),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
         FadeTransition(
       opacity: animation_1,
