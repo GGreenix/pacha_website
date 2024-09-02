@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class AnimatedPictures extends StatefulWidget {
-  BoxConstraints constraints;
-  AnimatedPictures({  
+  final BoxConstraints constraints;
+  const AnimatedPictures({  
     super.key,
     required this.constraints
   });
@@ -34,13 +34,13 @@ class _AnimatedPicturesState extends State<AnimatedPictures> with TickerProvider
   void initState() {
      
     controller_1 = AnimationController(vsync: this,
-    duration: Duration(milliseconds: duration));
+    duration: const Duration(milliseconds: duration));
     controller_2 = AnimationController(vsync: this,
-    duration: Duration(milliseconds: duration));
+    duration: const Duration(milliseconds: duration));
     controller_3 = AnimationController(vsync: this,
-    duration: Duration(milliseconds: duration));
+    duration: const Duration(milliseconds: duration));
     controller_4 = AnimationController(vsync: this,
-    duration: Duration(milliseconds: duration));
+    duration: const Duration(milliseconds: duration));
 
     animation_1 = Tween(begin: 0.0, end: 1.0).animate(controller_1);
     animation_2 = Tween(begin: 0.0, end: 1.0).animate(controller_2);
@@ -71,7 +71,7 @@ class _AnimatedPicturesState extends State<AnimatedPictures> with TickerProvider
       }
       );
       },
-      key: Key("row"),
+      key: const Key("row"),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -81,7 +81,7 @@ class _AnimatedPicturesState extends State<AnimatedPictures> with TickerProvider
               
                     borderRadius: BorderRadius.circular(5),
                     child: Image(         
-                      image: AssetImage("lib/assests/happy_customers.jpg"),
+                      image: const AssetImage("lib/assests/happy_customers.jpg"),
                       width: widget.constraints.maxWidth/5
                       ),
                       
@@ -92,7 +92,7 @@ class _AnimatedPicturesState extends State<AnimatedPictures> with TickerProvider
               
                     borderRadius: BorderRadius.circular(5),
                     child: Image(         
-                      image: AssetImage("lib/assests/happy_customers.jpg"),
+                      image: const AssetImage("lib/assests/happy_customers.jpg"),
                       width: widget.constraints.maxWidth/5
                       ),
                       
@@ -103,7 +103,7 @@ class _AnimatedPicturesState extends State<AnimatedPictures> with TickerProvider
               
                     borderRadius: BorderRadius.circular(5),
                     child: Image(         
-                      image: AssetImage("lib/assests/happy_customers.jpg"),
+                      image: const AssetImage("lib/assests/happy_customers.jpg"),
                       width: widget.constraints.maxWidth/5
                       ),
                       
@@ -114,7 +114,7 @@ class _AnimatedPicturesState extends State<AnimatedPictures> with TickerProvider
               
                     borderRadius: BorderRadius.circular(5),
                     child: Image(         
-                      image: AssetImage("lib/assests/happy_customers.jpg"),
+                      image: const AssetImage("lib/assests/happy_customers.jpg"),
                       width: widget.constraints.maxWidth/5
                       ),
                       

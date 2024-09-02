@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pacha_website/Componnets/PC_componnents/PCWEBComponent.dart';
-import 'package:pacha_website/Componnets/mobile_componnents/MobileWEBComponnents.dart';
+import 'package:resume/Componnets/PC_componnents/PCWEBComponent.dart';
+import 'package:resume/Componnets/mobile_componnents/MobileWEBComponnents.dart';
 class MainPage extends StatefulWidget {
 
   MainPage({super.key});

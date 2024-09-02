@@ -1,12 +1,11 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:pacha_website/constants.dart';
+import 'package:resume/constants.dart';
 
 class MobileWelcomeTile extends StatelessWidget {
-  BoxConstraints constraints;
+  final BoxConstraints constraints;
 
-  MobileWelcomeTile({super.key, required this.constraints});
+  const MobileWelcomeTile({super.key, required this.constraints});
 
   @override
   Widget build(BuildContext context) {
@@ -15,40 +14,39 @@ class MobileWelcomeTile extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(),
-        Directionality(
+          const Row(),
+        const Directionality(
                   textDirection: TextDirection.rtl,
-                  child: Text(Constats.title_mobile,
-                  style:  GoogleFonts.openSans(
-                    textStyle: TextStyle(
+                  child: Text(Constants.title_mobile,
+                  style:  TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize:25,
-                    color: Constats.title_color),
-                  )
+                    color: Constants.title_color),
+                  
                     ),
                 ),
                 Row(
                   children: [
-                    Spacer(),
+                    const Spacer(),
                     Expanded(
                       flex: 5,
                       child: Directionality(
                         textDirection: TextDirection.rtl,
                         child: DefaultTextStyle(
-    style: GoogleFonts.openSans(textStyle:TextStyle(
+    style: const TextStyle(
                           fontSize: 15,
-                          color: Constats.description_color)),
+                          color: Constants.description_color),
     child: AnimatedTextKit(
       totalRepeatCount: 1,
       animatedTexts: [
-        TyperAnimatedText(Constats.description_mobile),
+        TyperAnimatedText(Constants.description_mobile),
       ],
       
     ),
   ),
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                   ],
                 ),ClipRRect(
         borderRadius: const BorderRadius.all(Radius.circular(10)),

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:pacha_website/Componnets/Constraintor.dart';
 import 'package:social_media_buttons/social_media_buttons.dart';
-import 'package:visibility_detector/visibility_detector.dart';
+
+import '../Constraintor.dart';
 
 
 class PCBottomRow extends StatelessWidget {
-  BoxConstraints constraints;
+  final BoxConstraints constraints;
 
-  PCBottomRow({super.key, required this.constraints});
+  const PCBottomRow({super.key, required this.constraints});
   static const _fonst_size = 17.0;
   @override
   Widget build(BuildContext context) {
@@ -26,13 +26,13 @@ class PCBottomRow extends StatelessWidget {
           children: [
             Row(children: [
               IconButton(onPressed: (){},
-              icon: Icon(Icons.tiktok,color: Colors.white,)),
+              icon: const Icon(Icons.tiktok,color: Colors.white,)),
               IconButton(onPressed: (){},
-              icon: Icon(SocialMediaIcons.facebook,color: Colors.white,)),
+              icon: const Icon(SocialMediaIcons.facebook,color: Colors.white,)),
               IconButton(onPressed: (){},
-              icon: Icon(SocialMediaIcons.instagram,color: Colors.white,)),
+              icon: const Icon(SocialMediaIcons.instagram,color: Colors.white,)),
               IconButton(onPressed: (){},
-              icon: Icon(SocialMediaIcons.whatsapp,color: Colors.white,))
+              icon: const Icon(SocialMediaIcons.whatsapp,color: Colors.white,))
               
             ],),
             const Text("pacha3dprints@gmail.com",style: TextStyle(color: Colors.white,fontSize: _fonst_size)),

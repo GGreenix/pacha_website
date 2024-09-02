@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:pacha_website/Componnets/Constraintor.dart';
-import 'package:pacha_website/Componnets/PC_componnents/AnimatedPicture.dart';
-import 'package:pacha_website/Componnets/PC_componnents/BottomRow.dart';
-import 'package:pacha_website/Componnets/PC_componnents/OurTeam.dart';
-import 'package:pacha_website/Componnets/PC_componnents/PCOurTeam.dart';
-import 'package:pacha_website/Componnets/PC_componnents/WelcomingTile.dart';
+import 'package:resume/Componnets/Constraintor.dart';
+import 'package:resume/Componnets/PC_componnents/AnimatedPicture.dart';
+import 'package:resume/Componnets/PC_componnents/BottomRow.dart';
+import 'package:resume/Componnets/PC_componnents/OurTeam.dart';
+import 'package:resume/Componnets/PC_componnents/PCOurTeam.dart';
+import 'package:resume/Componnets/PC_componnents/WelcomingTile.dart';
+
 
 // ignore: must_be_immutable
 class PCWEBComponent extends StatelessWidget {
@@ -36,11 +37,11 @@ class PCWEBComponent extends StatelessWidget {
         ),
         Expanded(
           flex: 10,
-          child: Constraintor(child: LayoutBuilder(
+          child: Constraintor(constraints: constraints, child: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
               return AnimatedPictures(constraints: constraints);
             },
-          ), constraints: constraints),
+          )),
         ),
         Expanded(
           flex: 2,

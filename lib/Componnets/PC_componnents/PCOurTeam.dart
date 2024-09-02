@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:pacha_website/Componnets/Constraintor.dart';
-import 'package:pacha_website/Componnets/PC_componnents/Animated%20logos.dart';
-import 'package:pacha_website/Componnets/PC_componnents/AnimatedPicture.dart';
-import 'package:pacha_website/Componnets/Profile.dart';
-import 'package:pacha_website/constants.dart';
+import 'package:resume/Componnets/Constraintor.dart';
+import 'package:resume/Componnets/Profile.dart';
+import 'package:resume/constants.dart';
+
 
 class PCOurTeam extends StatelessWidget {
-  BoxConstraints constraints;
+  final BoxConstraints constraints;
 
-  PCOurTeam({super.key,required this.constraints});
+  const PCOurTeam({super.key,required this.constraints});
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +21,12 @@ class PCOurTeam extends StatelessWidget {
             children: [
     
         
-      Directionality(
+      const Directionality(
           
           textDirection: TextDirection.rtl,
           child: Text("הצוות",
           style: TextStyle(
-            color: Constats.title_color,
+            color: Constants.title_color,
             fontSize: 70
             ),
           ),
@@ -37,15 +35,15 @@ class PCOurTeam extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Profile(constraints: constraints,
-            name: Constats.tal_name,
-            position: Constats.tal_position,
-            description: Constats.tal_description,
+            name: Constants.tal_name,
+            position: Constants.tal_position,
+            description: Constants.tal_description,
             imagePath: "lib/assests/tal.jpg",),
             
             Profile(constraints: constraints,
-            name: Constats.pacha_name,
-            position: Constats.pacha_position,
-            description: Constats.pacha_description,
+            name: Constants.pacha_name,
+            position: Constants.pacha_position,
+            description: Constants.pacha_description,
             imagePath: "lib/assests/pacha.jpg",),
           ],
         ),

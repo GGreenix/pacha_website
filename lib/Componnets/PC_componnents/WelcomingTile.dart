@@ -1,8 +1,9 @@
 
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:pacha_website/Componnets/Animations/FadeInTextAnimation.dart';
-import 'package:pacha_website/constants.dart';
+import 'package:resume/Componnets/Animations/FadeInTextAnimation.dart';
+import 'package:resume/constants.dart';
+
 import 'package:social_media_buttons/social_media_buttons.dart';
 
 import '../Constraintor.dart';
@@ -26,7 +27,7 @@ class PCWelcomeTile extends StatelessWidget {
               
               constraints: constraints,
               child: Padding(
-                          padding: constraints.maxWidth < 1200 ? EdgeInsets.symmetric(horizontal: 60):EdgeInsets.all(0),
+                          padding: constraints.maxWidth < 1200 ? const EdgeInsets.symmetric(horizontal: 60):const EdgeInsets.all(0),
 
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -45,15 +46,15 @@ class PCWelcomeTile extends StatelessWidget {
                         
                         ElevatedButton.icon(
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateColor.resolveWith((states) => Color.fromARGB(255, 0, 255, 8)),
+                            backgroundColor: MaterialStateColor.resolveWith((states) => const Color.fromARGB(255, 0, 255, 8)),
                             splashFactory: NoSplash.splashFactory),
                           onPressed: (){},
-                          icon: Icon(SocialMediaIcons.whatsapp,size: 40,),
-                          label: Text("לחץ כאן להצעת מחיר", style: TextStyle(color: Colors.white, fontSize: 40),))
+                          icon: const Icon(SocialMediaIcons.whatsapp,size: 40,),
+                          label: const Text("לחץ כאן להצעת מחיר", style: TextStyle(color: Colors.white, fontSize: 40),))
                           
                       ],
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Flexible(
                       flex: 5,
                   child: animatedTitles(constraints: constraints),
@@ -69,6 +70,7 @@ class PCWelcomeTile extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class animatedTitles extends StatefulWidget {
   const animatedTitles({
     super.key,
@@ -81,10 +83,11 @@ class animatedTitles extends StatefulWidget {
   State<animatedTitles> createState() => _animatedTitlesState();
 }
 
+// ignore: camel_case_types
 class _animatedTitlesState extends State<animatedTitles> {
   bool _isTitleFinished = false;
   
-  bool _isDescritptionFinished = false;
+  final bool _isDescritptionFinished = false;
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +109,7 @@ class _animatedTitlesState extends State<animatedTitles> {
               )],
               fontWeight: FontWeight.bold,
               fontSize: widget.constraints.maxWidth < 1200? 50:70,
-              color: Constats.title_color),
+              color: Constants.title_color),
             child: AnimatedTextKit(
               onFinished: () => {
           setState((){
@@ -115,7 +118,7 @@ class _animatedTitlesState extends State<animatedTitles> {
               },
               totalRepeatCount: 1,
               animatedTexts: [
-          TyperAnimatedText(Constats.title),
+          TyperAnimatedText(Constants.title),
           
               ],
               
@@ -130,14 +133,14 @@ class _animatedTitlesState extends State<animatedTitles> {
           child: DefaultTextStyle(
     style: TextStyle(
             fontSize: widget.constraints.maxWidth < 1200? 20:25,
-            color: Constats.description_color),
-    child: _isDescritptionFinished? Text(Constats.description):AnimatedTextKit(
+            color: Constants.description_color),
+    child: _isDescritptionFinished? const Text(Constants.description):AnimatedTextKit(
       // repeatForever: true,
       
       totalRepeatCount: 1,
       animatedTexts: [
         FadeInAnimatedText(
-          Constats.description
+          Constants.description
           )
         
       ],
@@ -146,7 +149,7 @@ class _animatedTitlesState extends State<animatedTitles> {
   ),
         ):Directionality(
           textDirection: TextDirection.rtl,
-          child: Text(Constats.description,
+          child: Text(Constants.description,
           style: TextStyle(
             fontSize: widget.constraints.maxWidth < 1200? 20:25,
             color: Colors.transparent),),

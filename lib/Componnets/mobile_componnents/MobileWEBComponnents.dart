@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:pacha_website/Componnets/mobile_componnents/MobileOurTeam.dart';
-import 'package:pacha_website/Componnets/mobile_componnents/MobileWelcomTile.dart';
+import 'package:resume/Componnets/mobile_componnents/MobileWelcomTile.dart';
 
 import 'MobileBottomRow.dart';
+import 'MobileOurTeam.dart';
 
 class MobileWEBComponnents extends StatelessWidget {
-    BoxConstraints constraints;
+  final BoxConstraints constraints;
 
-  MobileWEBComponnents({super.key,required this.constraints});
+  const MobileWEBComponnents({super.key,required this.constraints});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class MobileWEBComponnents extends StatelessWidget {
           flex: 35,
           child: MobileOurTeam(constraints: constraints,),
         ),
-        Expanded(
+        const Expanded(
           flex: 2,
                     child: MobileBottomRow())
       ],

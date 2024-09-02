@@ -1,14 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pacha_website/Componnets/Constraintor.dart';
-import 'package:pacha_website/Componnets/Profile.dart';
-import 'package:pacha_website/constants.dart';
-import 'Animated logos.dart';
-import 'AnimatedPicture.dart';
+import 'package:resume/Componnets/Constraintor.dart';
+import 'package:resume/constants.dart';
+
 
 class PCWhyus extends StatelessWidget {
   final BoxConstraints constraints;
-  PCWhyus({
+  const PCWhyus({
     super.key,
     required this.constraints,  
 
@@ -34,14 +31,14 @@ class PCWhyus extends StatelessWidget {
                 child: ClipRRect(
                   
                         borderRadius: BorderRadius.circular(5),
-                        child: Image(         
+                        child: const Image(         
                           image: AssetImage("lib/assests/happy_customers.jpg"),
                           
                           ),
                           
                       ),
               ),
-              Spacer(flex: 2,),
+              const Spacer(flex: 2,),
                     Expanded(
                       flex: 10,
                       child: Row(
@@ -63,10 +60,10 @@ class PCWhyus extends StatelessWidget {
                                   ),
                             SizedBox(
                                 width: constraints.maxWidth <= 1200 ?constraints.maxWidth/4:300,
-                                child: Directionality(
+                                child: const Directionality(
                                   textDirection: TextDirection.rtl,
-                                  child: Text(Constats.description_ourteam_2 ,style: TextStyle(
-                                                  color: Constats.description_color,
+                                  child: Text(Constants.description_ourteam_2 ,style: TextStyle(
+                                                  color: Constants.description_color,
                                                   fontSize: 20
                                                   ),),
                                 ),
@@ -88,10 +85,10 @@ class PCWhyus extends StatelessWidget {
                                   ),
                                    SizedBox(
                                      width: constraints.maxWidth <= 1200 ?constraints.maxWidth/4:300,
-                                     child: Directionality(
+                                     child: const Directionality(
                                        textDirection: TextDirection.rtl,
-                                       child: Text(Constats.description_ourteam_1 ,style: TextStyle(
-                                                       color: Constats.description_color,
+                                       child: Text(Constants.description_ourteam_1 ,style: TextStyle(
+                                                       color: Constants.description_color,
                                                        fontSize: 20
                                                        ),),
                                      ),

@@ -1,15 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:pacha_website/constants.dart';
+import 'package:resume/constants.dart';
 
-/// Animated Text that displays a [Text] element, fading it in and then out.
-///
-/// ![Fade example](https://raw.githubusercontent.com/aagarwal1012/Animated-Text-Kit/master/display/fade.gif)
 class FadeInAnimatedText extends AnimatedText {
-  /// Marks ending of fade-in interval, default value = 0.5
   final double fadeInEnd;
 
-  /// Marks the beginning of fade-out interval, default value = 0.8
   FadeInAnimatedText(
     String text, {
     TextAlign textAlign = TextAlign.start,
@@ -39,7 +34,7 @@ class FadeInAnimatedText extends AnimatedText {
   }
 
   @override
-  Widget completeText(BuildContext context) => Text(Constats.description);
+  Widget completeText(BuildContext context) => const Text(Constants.description);
 
   @override
   Widget animatedBuilder(BuildContext context, Widget? child) {

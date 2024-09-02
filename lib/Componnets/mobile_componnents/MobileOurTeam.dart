@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../constants.dart';
 import '../Profile.dart';
 
 class MobileOurTeam extends StatelessWidget {
-  BoxConstraints constraints;
+  final BoxConstraints constraints;
 
-  MobileOurTeam({super.key, required this.constraints});
+  const MobileOurTeam({super.key, required this.constraints});
 
   @override
   Widget build(BuildContext context) {
@@ -15,26 +14,26 @@ class MobileOurTeam extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(
+              const Expanded(
                 flex: 2,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text("Our team",
-                    style: GoogleFonts.openSans(textStyle:TextStyle(
+                    style: TextStyle(
                       // fontFamily: 'Test',
-                      color: Constats.title_color,
+                      color: Constants.title_color,
                       fontSize: 71
-                      ),
+                      
                     )
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      padding: EdgeInsets.symmetric(horizontal: 30),
                       child: Text("Pacha 3D Prints was founded by a team of\nexperienced additive manufacturing specialists who shared a passion for providing top-of-the-line FDM printers and personalized customer service.",
-                      style: GoogleFonts.openSans(textStyle:TextStyle(
+                      style: TextStyle(
                         fontSize: 20,
-                        color: Constats.description_color),
-                      )),
+                        color: Constants.description_color),
+                      ),
                     ),
                   ],
                 ),
@@ -51,20 +50,20 @@ class MobileOurTeam extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Profile(constraints: constraints,
-                    name: Constats.tal_name,
-                    position: Constats.tal_position,
-                    description: Constats.tal_description,
+                    name: Constants.tal_name,
+                    position: Constants.tal_position,
+                    description: Constants.tal_description,
                     imagePath: "lib/assests/tal.jpg",),
                     
                     Profile(constraints: constraints,
-                    name: Constats.pacha_name,
-                    position: Constats.pacha_position,
-                    description: Constats.pacha_description,
+                    name: Constants.pacha_name,
+                    position: Constants.pacha_position,
+                    description: Constants.pacha_description,
                     imagePath: "lib/assests/pacha.jpg",),
                   ],
                 ),
                           ),
-                          constraints.maxWidth >= 1378? Spacer(flex: 1,):Container(),
+                          constraints.maxWidth >= 1378? const Spacer(flex: 1,):Container(),
                         ],
                       ),
               ),
@@ -74,20 +73,20 @@ class MobileOurTeam extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Column(
                   children: [
                     Text("HAPPY CUSTOMERS",
-                              style: GoogleFonts.openSans(textStyle:TextStyle(
-                                color: Constats.title_color,
+                              style: TextStyle(
+                                color: Constants.title_color,
                                 fontSize: 60
-                                ),
+                                
                               )),
-                              Text(Constats.description_ourteam_1,style: GoogleFonts.openSans(textStyle:TextStyle(
-                                              color: Constats.description_color,
+                              Text(Constants.description_ourteam_1,style: TextStyle(
+                                              color: Constants.description_color,
                                               fontSize: 20
-                                              ),)),
+                                              ,)),
                   ],
                 ),
               ),
@@ -95,14 +94,14 @@ class MobileOurTeam extends StatelessWidget {
                   
                         borderRadius: BorderRadius.circular(5),
                         child: Image(         
-                          image: AssetImage("lib/assests/happy_customers.png"),
+                          image: const AssetImage("lib/assests/happy_customers.png"),
                           height: constraints.maxWidth/1.6,)
                           
                       ),
             ],
           ),
         ),
-        Spacer(flex: 1,)
+        const Spacer(flex: 1,)
             ],
           );
   }

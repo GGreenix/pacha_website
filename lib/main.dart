@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pacha_website/main_page.dart';
+import 'package:resume/main_page.dart';
 
 
 void main() {

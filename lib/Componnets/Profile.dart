@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:pacha_website/constants.dart';
+import 'package:resume/constants.dart';
 
 class Profile extends StatelessWidget {
   
@@ -37,7 +36,7 @@ class Profile extends StatelessWidget {
           borderRadius: BorderRadius.circular(5),
           child: Image(         
             
-            image: AssetImage(this.imagePath),
+            image: AssetImage(imagePath),
             width: constraintsPF.maxHeight/2),
             
         ),
@@ -45,22 +44,22 @@ class Profile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-          Text(this.name, style: GoogleFonts.openSans(textStyle:TextStyle(
-            color: Constats.title_color,
+          Text(name, style: const TextStyle(
+            color: Constants.title_color,
             fontSize: 15,
             fontWeight: FontWeight.bold
-          ),)
           ),
-          Text(this.position,style: GoogleFonts.openSans(textStyle:TextStyle(
-            color: Constats.description_color,
+          ),
+          Text(position,style: const TextStyle(
+            color: Constants.description_color,
             fontSize: 15,
             fontWeight: FontWeight.bold
-          ),)),
-          Text(this.description,style: GoogleFonts.openSans(textStyle:TextStyle(
-            color: Constats.description_color,
+          ),),
+          Text(description,style: const TextStyle(
+            color: Constants.description_color,
             fontSize: 20,
             fontWeight: FontWeight.bold
-          ),))
+          ),)
         ],)
       ],);
           }
@@ -75,23 +74,23 @@ class Profile extends StatelessWidget {
             children: [
             Directionality(
               textDirection: TextDirection.rtl,
-              child: Text(this.name, style: GoogleFonts.roboto(textStyle:TextStyle(
-                color: Constats.title_color,
+              child: Text(name, style: const TextStyle(
+                color: Constants.title_color,
                 fontSize: 35,
                 fontWeight: FontWeight.bold
-              ),)
+              ),
               ),
             ),
             Directionality(
               textDirection: TextDirection.rtl,
-              child: Text(this.position,style: GoogleFonts.roboto(textStyle:TextStyle(
-                color: Constats.description_color,
+              child: Text(position,style: const TextStyle(
+                color: Constants.description_color,
                 fontSize: 20,
                 fontWeight: FontWeight.bold
-              ),)),
+              ),),
             ),
-            Text(this.description,style: TextStyle(
-              color: Constats.description_color,
+            Text(description,style: const TextStyle(
+              color: Constants.description_color,
               fontSize: 20,
               fontWeight: FontWeight.bold
             ),)
@@ -103,7 +102,7 @@ class Profile extends StatelessWidget {
             borderRadius: BorderRadius.circular(5),
             child: Image(         
               height: constraintsPF.maxWidth,               
-              image: AssetImage(this.imagePath),
+              image: AssetImage(imagePath),
               width: constraintsPF.maxHeight),
               
           ),

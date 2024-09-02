@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:social_media_buttons/social_media_buttons.dart';
 
 class MobileBottomRow extends StatelessWidget {
@@ -12,7 +11,7 @@ class MobileBottomRow extends StatelessWidget {
     child:  Row(
       
       children: [
-        Spacer(),
+        const Spacer(),
         Expanded(
           flex: 30,
           child: Row(
@@ -24,39 +23,39 @@ class MobileBottomRow extends StatelessWidget {
                 children: [
                   Row(children: [
                     IconButton(onPressed: (){},
-                  icon: Icon(Icons.tiktok,color: Colors.white,)),
+                  icon: const Icon(Icons.tiktok,color: Colors.white,)),
                   IconButton(onPressed: (){},
-                  icon: Icon(SocialMediaIcons.facebook,color: Colors.white,))
+                  icon: const Icon(SocialMediaIcons.facebook,color: Colors.white,))
                     
                     
                     
                   ],),
                   Row(children: [
                     IconButton(onPressed: (){},
-                  icon: Icon(SocialMediaIcons.instagram,color: Colors.white,)),
+                  icon: const Icon(SocialMediaIcons.instagram,color: Colors.white,)),
                   IconButton(onPressed: (){},
-                  icon: Icon(SocialMediaIcons.whatsapp,color: Colors.white,))
+                  icon: const Icon(SocialMediaIcons.whatsapp,color: Colors.white,))
                     
                     
                     
                   ],),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: Text("pacha3dprints@gmail.com",style: GoogleFonts.openSans(textStyle:TextStyle(color: Colors.white,fontSize: 14))),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 12),
+                child: Text("pacha3dprints@gmail.com",style: TextStyle(color: Colors.white,fontSize: 14)),
               ),
-              Column(
+              const Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text("Tal: +972-504460672",style:  GoogleFonts.openSans(textStyle:TextStyle(color: Colors.white,fontSize: 14))),
-                  Text("Guy: +972-509025901",style:  GoogleFonts.openSans(textStyle:TextStyle(color: Colors.white,fontSize: 14))),
+                  Text(Constants.tal_phone_number, style:  TextStyle(color: Colors.white,fontSize: 14)),
+                  Text("Guy: +972-509025901",style:  TextStyle(color: Colors.white,fontSize: 14)),
                 ],
               )
 
           ],),
         ),
-        Spacer(),
+        const Spacer(), 
       ],
     ),
     );

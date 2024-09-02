@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class AnimatedLogos extends StatefulWidget {
-  BoxConstraints constraints;
-  AnimatedLogos({  
+  final BoxConstraints constraints;
+  const AnimatedLogos({  
     super.key,
     required this.constraints
   });
@@ -28,20 +28,19 @@ class _AnimatedLogosState extends State<AnimatedLogos> with TickerProviderStateM
       
       static const int duration = 350;
       
-      static const double valueToStart = 0.2;
 
   
   @override
   void initState() {
      
     controller_1 = AnimationController(vsync: this,
-    duration: Duration(milliseconds: duration));
+    duration: const Duration(milliseconds: duration));
     controller_2 = AnimationController(vsync: this,
-    duration: Duration(milliseconds: duration));
+    duration: const Duration(milliseconds: duration));
     controller_3 = AnimationController(vsync: this,
-    duration: Duration(milliseconds: duration));
+    duration: const Duration(milliseconds: duration));
     controller_4 = AnimationController(vsync: this,
-    duration: Duration(milliseconds: duration));
+    duration: const Duration(milliseconds: duration));
 
     animation_1 = Tween(begin: 0.0, end: 1.0).animate(controller_1);
     animation_2 = Tween(begin: 0.0, end: 1.0).animate(controller_2);
@@ -63,7 +62,7 @@ class _AnimatedLogosState extends State<AnimatedLogos> with TickerProviderStateM
       }
       );
       },
-      key: Key("rows"),
+      key: const Key("rows"),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -73,7 +72,7 @@ class _AnimatedLogosState extends State<AnimatedLogos> with TickerProviderStateM
               
                     borderRadius: BorderRadius.circular(5),
                     child: Image(         
-                      image: AssetImage("lib/assests/happy_customers.jpg"),
+                      image: const AssetImage("lib/assests/happy_customers.jpg"),
                       width: widget.constraints.maxWidth/5
                       ),
                       
@@ -84,7 +83,7 @@ class _AnimatedLogosState extends State<AnimatedLogos> with TickerProviderStateM
               
                     borderRadius: BorderRadius.circular(5),
                     child: Image(         
-                      image: AssetImage("lib/assests/happy_customers.jpg"),
+                      image: const AssetImage("lib/assests/happy_customers.jpg"),
                       width: widget.constraints.maxWidth/5
                       ),
                       
@@ -95,7 +94,7 @@ class _AnimatedLogosState extends State<AnimatedLogos> with TickerProviderStateM
               
                     borderRadius: BorderRadius.circular(5),
                     child: Image(         
-                      image: AssetImage("lib/assests/happy_customers.jpg"),
+                      image: const AssetImage("lib/assests/happy_customers.jpg"),
                       width: widget.constraints.maxWidth/5
                       ),
                       
@@ -106,7 +105,7 @@ class _AnimatedLogosState extends State<AnimatedLogos> with TickerProviderStateM
               
                     borderRadius: BorderRadius.circular(5),
                     child: Image(         
-                      image: AssetImage("lib/assests/happy_customers.jpg"),
+                      image: const AssetImage("lib/assests/happy_customers.jpg"),
                       width: widget.constraints.maxWidth/5
                       ),
                       
